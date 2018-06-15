@@ -17,7 +17,7 @@ table = dict()
 
 for i in range(num):
     k, v = map(int, input().split())
-    table[k] = table.setdefault(k, 0) + v
+    table[k] = table.get(k, 0) + v
 
 for k in sorted(table):
     print(k, table[k])
